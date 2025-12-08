@@ -1,0 +1,271 @@
+/* dashboard.css - base + saved-plans styles */
+.dash-wrap {
+  max-width: 1100px;
+  margin: 28px auto;
+  color: #eaf4ff;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+  gap: 12px;
+}
+
+.dash-title {
+  font-size: 28px;
+  margin: 0 0 6px 0;
+  color: #fff;
+}
+
+.dash-sub {
+  margin: 0;
+  opacity: 0.75;
+  font-size: 14px;
+  color: #cfe7ff;
+}
+
+.header-actions {
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+
+.user-badge {
+  background: rgba(255,255,255,0.04);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #cfe7ff;
+}
+
+.btn-logout {
+  background: linear-gradient(90deg,#ff6b6b,#ff3b3b);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dash-main {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 20px;
+  align-items: start;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(10,18,30,0.95), rgba(6,10,16,0.9));
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(2,6,12,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.calorie-card h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.muted {
+  color: rgba(255,255,255,0.65);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.calorie-form .row {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.calorie-form .row.triple {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+
+.calorie-form label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #dceffb;
+}
+
+.calorie-form input[type="number"],
+.calorie-form select,
+.calorie-form input[type="text"],
+input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  outline: none;
+}
+
+.radio-row {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+.form-actions {
+  margin-top: 10px;
+  display:flex;
+  gap:10px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg,#5eead4,#06b6d4);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight:700;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #cfe7ff;
+  cursor: pointer;
+}
+
+.notes {
+  margin-top: 8px;
+  color: #ffd1d1;
+  font-size: 13px;
+}
+
+.result {
+  margin-top: 14px;
+  border-top: 1px dashed rgba(255,255,255,0.03);
+  padding-top: 12px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin: 8px 0 0 0;
+}
+
+.result-grid > div {
+  background: rgba(255,255,255,0.02);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.result-note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+}
+
+/* saved plans styles */
+.plans-list {
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.plan-item {
+  background: rgba(255,255,255,0.02);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.plan-head {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plan-actions {
+  display:flex;
+  gap: 6px;
+}
+
+.small-btn {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.04);
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #eaf4ff;
+  font-size: 13px;
+}
+
+.small-btn.danger {
+  background: linear-gradient(90deg,#ff7b7b,#ff4b4b);
+  border: none;
+}
+
+.plan-meta {
+  margin-top: 6px;
+  color: rgba(255,255,255,0.75);
+  font-size: 12px;
+}
+
+/* modal */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,12,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal {
+  width: 440px;
+  background: linear-gradient(180deg,#071026,#0b1320);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.04);
+  box-shadow: 0 8px 40px rgba(1,6,12,0.6);
+  color: #eaf4ff;
+}
+
+.modal h3 {
+  margin: 0 0 6px 0;
+}
+
+.modal input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* quick actions box */
+.info-card ul {
+  margin: 8px 0 0 18px;
+  color: rgba(255,255,255,0.8);
+}
+
+@media (max-width: 880px) {
+  .dash-main {
+    grid-template-columns: 1fr;
+  }
+  .result-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .calorie-form .row.triple {
+    grid-template-columns: 1fr;
+  }
+  .modal {
+    width: 92%;
+    margin: 16px;
+  }
+}
