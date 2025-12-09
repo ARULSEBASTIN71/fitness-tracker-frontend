@@ -2,7 +2,7 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "http://localhost:4000", // <-- backend URL (must be exactly this)
+  baseURL: "https://fitness-tracker-backend-v5jh.onrender.com", // <-- backend URL (must be exactly this)
   headers: {
     "Content-Type": "application/json"
   }
